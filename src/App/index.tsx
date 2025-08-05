@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import routes from './routes';
 import GenericTestRoutes from '../generic-tests';
@@ -6,7 +6,7 @@ import Basic from '../examples/Basic';
 import Header from './header';
 
 export default () => (
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<Navigate to="/examples" />} />
       <Route path="examples" element={<Header />}>
@@ -17,5 +17,5 @@ export default () => (
       </Route>
       <Route path="tests/generic/*" element={<GenericTestRoutes />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
